@@ -1,4 +1,13 @@
-import { GET_LOGS, SET_LOADING, LOGS_ERROR } from '../actions/types';
+import {
+  GET_LOGS,
+  SET_LOADING,
+  LOGS_ERROR,
+  ADD_LOG,
+  DELETE_LOG,
+  UPDATE_LOG,
+  SET_CURRENT,
+  CLEAR_CURRENT,
+} from '../actions/types';
 
 const initialState = {
   logs: null,
@@ -13,6 +22,38 @@ export default (state = initialState, action) => {
       return {
         ...state,
         logs: action.payload,
+        loading: false,
+      };
+    case ADD_LOG:
+      return {
+        ...state,
+        logs: [action.payload, ...state.logs],
+        loading: false,
+      };
+    case UPDATE_LOG:
+      return {
+        ...state,
+        logs: state.logs.map((log) =>
+          log.id === action.payload.id ? action.payload : log
+        ),
+        loading: false,
+      };
+    case SET_CURRENT:
+      return {
+        ...state,
+        current: action.payload,
+        loading: false,
+      };
+    case CLEAR_CURRENT:
+      return {
+        ...state,
+        current: null,
+        loading: false,
+      };
+    case DELETE_LOG:
+      return {
+        ...state,
+        logs: state.logs.filter((log) => log.id !== action.payload.id),
         loading: false,
       };
     case SET_LOADING:
