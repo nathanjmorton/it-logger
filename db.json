@@ -1,11 +1,11 @@
 {
   "logs": [
     {
-      "message": "asbc",
+      "id": 1,
+      "message": "asbc 123",
       "attention": true,
-      "tech": "John Doe",
-      "date": "2020-12-30T06:10:44.508Z",
-      "id": 1
+      "tech": "Sara Wilson",
+      "date": "2020-12-30T21:39:37.072Z"
     },
     {
       "id": 2,
@@ -13,6 +13,13 @@
       "attention": false,
       "tech": "Sara Wilson",
       "date": "2020-12-30T06:11:07.326Z"
+    },
+    {
+      "message": "omg",
+      "attention": false,
+      "tech": "test test",
+      "date": "2020-12-31T02:50:24.734Z",
+      "id": 3
     }
   ],
   "techs": [
@@ -30,6 +37,16 @@
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
+    },
+    {
+      "firstName": "test",
+      "lastName": "test",
+      "id": 4
+    },
+    {
+      "firstName": "new",
+      "lastName": "tech",
+      "id": 5
     }
   ]
 }
