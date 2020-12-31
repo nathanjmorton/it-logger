@@ -17,7 +17,6 @@ const EditLogModal = ({ current, updateLog }) => {
       setTech(current.tech);
     }
   }, [current]);
-  console.log(`current: ${current}`);
 
   const onSubmit = () => {
     if (message === '' || tech == '') {

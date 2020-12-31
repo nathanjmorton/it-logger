@@ -1,13 +1,5 @@
 import {
-  GET_LOGS,
   SET_LOADING,
-  LOGS_ERROR,
-  ADD_LOG,
-  DELETE_LOG,
-  UPDATE_LOG,
-  SET_CURRENT,
-  CLEAR_CURRENT,
-  SEARCH_LOGS,
   GET_TECHS,
   ADD_TECH,
   DELETE_TECH,
@@ -39,6 +31,12 @@ export default (state = initialState, action) => {
         techs: [action.payload, ...state.techs],
         loading: false,
       };
+    case DELETE_TECH:
+      return {
+        ...state,
+        techs: state.techs.filter((tech) => tech.id !== action.payload.id),
+        loading: false,
+      };
     case TECHS_ERROR:
       console.log(action.payload);
       return {
@@ -46,7 +44,6 @@ export default (state = initialState, action) => {
         error: action.payload,
         loading: false,
       };
-
     default:
       return state;
   }

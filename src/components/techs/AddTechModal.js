@@ -13,7 +13,7 @@ const AddTechModal = ({ addTech }) => {
       M.toast({ html: 'Please enter first and last name' });
     } else {
       addTech({ firstName, lastName });
-      M.toast({ html: 'tech added' });
+      M.toast({ html: `${firstName} ${lastName} added as tech` });
     }
     // Clear fields
     setFirstName('');

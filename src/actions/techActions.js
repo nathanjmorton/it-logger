@@ -1,13 +1,5 @@
 import {
-  GET_LOGS,
   SET_LOADING,
-  LOGS_ERROR,
-  ADD_LOG,
-  DELETE_LOG,
-  UPDATE_LOG,
-  SET_CURRENT,
-  CLEAR_CURRENT,
-  SEARCH_LOGS,
   GET_TECHS,
   ADD_TECH,
   DELETE_TECH,
@@ -51,6 +43,27 @@ export const addTech = (tech) => async (dispatch) => {
     dispatch({
       type: ADD_TECH,
       payload: data,
+    });
+  } catch (err) {
+    dispatch({
+      type: TECHS_ERROR,
+      payload: err.response.statusText,
+    });
+  }
+};
+
+// Delete tech from server
+export const deleteTech = (tech) => async (dispatch) => {
+  try {
+    setLoading();
+
+    await fetch(`/techs/${tech.id}`, {
+      method: 'DELETE',
+    });
+
+    dispatch({
+      type: DELETE_TECH,
+      payload: tech,
     });
   } catch (err) {
     dispatch({

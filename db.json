@@ -11,8 +11,8 @@
       "id": 2,
       "message": "fixed",
       "attention": false,
-      "tech": "Sara Wilson",
-      "date": "2020-12-30T06:11:07.326Z"
+      "tech": "test test test  tes tes tes",
+      "date": "2020-12-31T03:50:25.793Z"
     },
     {
       "message": "omg",
@@ -20,33 +20,27 @@
       "tech": "test test",
       "date": "2020-12-31T02:50:24.734Z",
       "id": 3
+    },
+    {
+      "id": 4,
+      "message": "esst test ",
+      "attention": true,
+      "tech": "Sara Wilson",
+      "date": "2020-12-31T03:39:04.760Z"
+    },
+    {
+      "message": "test teset 123344",
+      "attention": true,
+      "tech": "Jill Morris",
+      "date": "2020-12-31T03:50:18.964Z",
+      "id": 5
     }
   ],
   "techs": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe"
-    },
-    {
-      "id": 2,
-      "firstName": "Sam",
-      "lastName": "Smith"
-    },
-    {
-      "id": 3,
-      "firstName": "Sara",
-      "lastName": "Wilson"
-    },
-    {
-      "firstName": "test",
-      "lastName": "test",
-      "id": 4
-    },
-    {
-      "firstName": "new",
-      "lastName": "tech",
-      "id": 5
+      "firstName": "Jill",
+      "lastName": "Morris",
+      "id": 2
     }
   ]
 }
